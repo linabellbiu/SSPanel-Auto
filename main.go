@@ -18,11 +18,12 @@ type Option struct {
 	TryCount   int    `short:"n" long:"tryCount" description:"请求失败重试次数" default:"3"`
 	HttpProxy  string `short:"t" long:"httpProxy" description:"设置http代理 例如:http://127.0.0.1:7890"`
 	HttpsProxy string `short:"s" long:"httpsProxy" description:"设置https代理 例如:https://127.0.0.1:7890"`
+	Login      string `short:"l" long:"login" default:"auto" description:"设置身份是否过期自动登录 \n auto \n always \n no \n"`
 }
 
 var (
 	cmd    Option
-	client *resty.Client
+	client = resty.New()
 )
 
 func main() {
@@ -31,7 +32,10 @@ func main() {
 		log.Fatal("Parse error:", err)
 	}
 
-	client = resty.New()
+	if cmd.Login != "auto" && cmd.Login != "always" && cmd.Login != "no" {
+		log.Fatal("请设置设置身份是否过期自动登录,查看详情 `./SSPanel-AutoCheckin -h`")
+	}
+
 	if cmd.HttpProxy != "" {
 		_ = os.Setenv("http_proxy", cmd.HttpProxy)
 	}

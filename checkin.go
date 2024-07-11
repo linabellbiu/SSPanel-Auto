@@ -20,10 +20,12 @@ func checkin(cookies []*http.Cookie) {
 		if resp.StatusCode() == http.StatusFound {
 			fmt.Println(fmt.Printf("checkin http code %d,try login again", resp.StatusCode()))
 			// 重新登录
-			cookies, err = login()
-			if err != nil {
-				fmt.Println(fmt.Errorf("login failed %s", err.Error()))
-				return
+			if cmd.Login == "auto" {
+				cookies, err = login()
+				if err != nil {
+					fmt.Println(fmt.Errorf("login failed %s", err.Error()))
+					return
+				}
 			}
 			continue
 		}

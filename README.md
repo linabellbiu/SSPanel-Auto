@@ -24,11 +24,16 @@ Application Options:
 # 使用方式
 
 ## mac,linux
+
 ```shell
-./SSPanel-AutoCheckin -d=https://www.onesy.cc/ -e=834971685@qq.com -p=w123456789 -t=http://127.0.0.1:7890 -s=https://127.0.0.1:7890
+./SSPanel-AutoCheckin -d=https://www.onesy.cc/ -e=834971685@qq.com -p=w123456789 
 ```
 ## Windows
 ```shell
 ./SSPanel-AutoCheckin.exe -d=https://www.onesy.cc/ -e=834971685@qq.com -p=w123456789 -t=http://127.0.0.1:7890 -s=https://127.0.0.1:7890
 ```
 
+## 如果运行在国内,请求访问失败可能需要配置科学上网
+```shell
+./SSPanel-AutoCheckin.exe -d=https://www.onesy.cc/ -e=834971685@qq.com -p=w123456789 -t=http://127.0.0.1:7890 -s=https://127.0.0.1:7890
+```
