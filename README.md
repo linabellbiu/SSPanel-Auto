@@ -32,7 +32,7 @@ Application Options:
 
    <img src=".github/img.png" width="600">  
 
-4. 完成
+3. 手动开启 Actions，执行一次工作流。(因为 Github 默认 Fork 后的项目 Github Actions 处于关闭状态)
 
 
 ## mac,linux
