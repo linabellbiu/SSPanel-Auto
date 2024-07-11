@@ -25,8 +25,15 @@ Application Options:
 
 ```
 # 使用方式
-下载运行包 https://github.com/linabellbiu/SSPanel-AutoCheckin/releases
+
+## 推荐使用github action 每天自动运行,无需服务器,简单快速0成本
+1. fork 仓库代码到自己仓库
+2. 把email和passwd添加到仓库的`secrets`中,[使用指南](https://docs.github.com/zh/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository)
+3. 完成
+
+
 ## mac,linux
+### [下载可执行文件](https://github.com/linabellbiu/SSPanel-AutoCheckin/releases)
 
 ```shell
 ./SSPanel-AutoCheckin -d=https://www.onesy.cc/ -e=xxx@gmail.com -p=123456 -C
