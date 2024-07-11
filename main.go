@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"github.com/go-resty/resty/v2"
 	"github.com/jessevdk/go-flags"
+	"github.com/robfig/cron/v3"
 	"log"
 	"net/http"
 	"os"
@@ -29,6 +30,8 @@ type Option struct {
 var (
 	cmd    Option
 	client = resty.New()
+	// 精确到秒
+	crontab = cron.New(cron.WithSeconds())
 )
 
 func main() {
@@ -148,7 +151,7 @@ func login() ([]*http.Cookie, error) {
 		}
 
 		if err := Response(resp.Body()); err != nil {
-			return nil, fmt.Errorf("login body unmarshal err: %v \n", err)
+			return nil, fmt.Errorf("login body unmarshal err: %v ,body :%s\n", err, string(resp.Body()))
 		}
 
 		fmt.Printf("login success \n cookie: %v \n", resp.Cookies())
