@@ -2,10 +2,10 @@
 实现SSPanel框架搭建的平台流量自动签到功能,windows,mac,linux 都可以使用
 
 ## 相关说明 
-适用于使用 SSPanel 用户管理面板搭建的网站，网站页面底部会有 Powered by SSPANEL 字段
-支持一日多次签到
-支持推送签到信息到微信
+适用于使用 SSPanel 用户管理面板搭建的网站，网站页面底部会有 Powered by SSPANEL 字段  
+登录页面张这个样子
 
+<img src=".github/img2.png" width="300">
 
 # 参数
 ```
@@ -28,8 +28,11 @@ Application Options:
 
 ## 推荐使用github action 每天自动运行,无需执行环境,简单快速0成本
 1. fork 仓库代码到自己仓库
-2. 把email和passwd添加到仓库的`secrets`中,[使用指南](https://docs.github.com/zh/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository)
-3. 完成
+2. 把email和passwd添加到仓库的`secrets`中,[使用指南](https://docs.github.com/zh/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository)  
+
+   <img src=".github/img.png" width="600">  
+
+4. 完成
 
 
 ## mac,linux
