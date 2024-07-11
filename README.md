@@ -39,14 +39,14 @@ Application Options:
 ### [下载可执行文件](https://github.com/linabellbiu/SSPanel-AutoCheckin/releases)
 
 ```shell
-./SSPanel-AutoCheckin -d=https://www.onesy.cc/ -e=xxx@gmail.com -p=123456 -C
+./SSPanel-AutoCheckin -d=https://www.xxxx.com/ -e=xxx@gmail.com -p=123456 -C
 ```
 ## Windows
 ```shell
-./SSPanel-AutoCheckin.exe -d=https://www.onesy.cc/ -e=xxx@gmail.com -p=123456 -C
+./SSPanel-AutoCheckin.exe -d=https://www.xxx.com/ -e=xxx@gmail.com -p=123456 -C
 ```
 
 ## 如果运行在国内,请求访问失败可能需要配置科学上网
 ```shell
-./SSPanel-AutoCheckin.exe -d=https://www.onesy.cc/ -e=xxx@gmail.com -p=123456 -t=http://127.0.0.1:7890 -s=https://127.0.0.1:7890 -C
+./SSPanel-AutoCheckin.exe -d=https://www.xxx.com/ -e=xxx@gmail.com -p=123456 -t=http://127.0.0.1:7890 -s=https://127.0.0.1:7890 -C
 ```
