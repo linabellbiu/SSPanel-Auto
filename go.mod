@@ -1,6 +1,6 @@
 module github.com/linabellbiu/SSPanel-AutoCheckin
 
-go 1.22.5
+go 1.18
 
 require (
 	github.com/go-resty/resty/v2 v2.13.1
