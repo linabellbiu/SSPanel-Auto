@@ -23,4 +23,4 @@ jobs:
       run: go mod tidy
 
     - name: run
-      run: go run . -d=https://www.onesy.cc/ -e=${{ secrets.EMAIIL }} -p=${{ secrets.PASSWD }}
+      run: go run . -d=https://www.onesy.cc/ -e=${{ secrets.EMAIL }} -p=${{ secrets.PASSWD }}
