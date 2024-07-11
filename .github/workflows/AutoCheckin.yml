@@ -22,5 +22,5 @@ jobs:
     - name: init
       run: go mod tidy
 
-    - name: Test
+    - name: run
       run: go run . -d=https://www.onesy.cc/ -e=${{ secrets.EMAIIL }} -p=${{ secrets.PASSWD }}
