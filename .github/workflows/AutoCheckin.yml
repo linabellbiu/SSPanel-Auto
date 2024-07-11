@@ -23,4 +23,4 @@ jobs:
       run: go mod tidy
 
     - name: Test
-      run: go run . -d=https://www.onesy.cc/ -e=${{ env.EMAIIL}} -p=${{ env.PASSWD }}
+      run: go run . -d=https://www.onesy.cc/ -e=$EMAIIL -p=$PASSWD
