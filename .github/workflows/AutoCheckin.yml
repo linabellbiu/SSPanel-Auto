@@ -3,7 +3,8 @@
 
 name: AutoCheckin
 
-on:
+on: 
+  workflow_dispatch:
   schedule:
     - cron: '0 18 * * *' # 时差，北京时间凌晨12点00分
 
