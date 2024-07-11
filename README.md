@@ -20,20 +20,23 @@ Application Options:
   -n, --tryCount=   请求失败重试次数 (default: 3)
   -t, --httpProxy=  设置http代理 例如:http://127.0.0.1:7890
   -s, --httpsProxy= 设置https代理 例如:https://127.0.0.1:7890
+  -C, --cron        设置每天定时执行,只用在本地执行,如果是放在github action中要关闭这个选项.
+                    每天的执行时间: 1 0 0 * * *
+
 ```
 # 使用方式
 下载运行包 https://github.com/linabellbiu/SSPanel-AutoCheckin/releases
 ## mac,linux
 
 ```shell
-./SSPanel-AutoCheckin -d=https://www.onesy.cc/ -e=834971685@qq.com -p=w123456789 
+./SSPanel-AutoCheckin -d=https://www.onesy.cc/ -e=xxx@gmail.com -p=123456 -C
 ```
 ## Windows
 ```shell
-./SSPanel-AutoCheckin.exe -d=https://www.onesy.cc/ -e=834971685@qq.com -p=w123456789
+./SSPanel-AutoCheckin.exe -d=https://www.onesy.cc/ -e=xxx@gmail.com -p=123456 -C
 ```
 
 ## 如果运行在国内,请求访问失败可能需要配置科学上网
 ```shell
-./SSPanel-AutoCheckin.exe -d=https://www.onesy.cc/ -e=834971685@qq.com -p=w123456789 -t=http://127.0.0.1:7890 -s=https://127.0.0.1:7890
+./SSPanel-AutoCheckin.exe -d=https://www.onesy.cc/ -e=xxx@gmail.com -p=123456 -t=http://127.0.0.1:7890 -s=https://127.0.0.1:7890 -C
 ```
