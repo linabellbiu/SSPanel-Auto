@@ -26,7 +26,7 @@ Application Options:
 ```
 # 使用方式
 
-## 推荐使用github action 每天自动运行,无需服务器,简单快速0成本
+## 推荐使用github action 每天自动运行,无需执行环境,简单快速0成本
 1. fork 仓库代码到自己仓库
 2. 把email和passwd添加到仓库的`secrets`中,[使用指南](https://docs.github.com/zh/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository)
 3. 完成
