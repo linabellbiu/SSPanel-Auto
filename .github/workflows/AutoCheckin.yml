@@ -6,7 +6,7 @@ name: AutoCheckin
 on: 
   workflow_dispatch:
   schedule:
-    - cron: '0 18 * * *' # 时差，北京时间凌晨00点00分
+    - cron: '0 16 * * *' # 时差，北京时间凌晨00点00分
 
 jobs:
   build:
