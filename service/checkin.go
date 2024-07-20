@@ -9,6 +9,8 @@ import (
 )
 
 type CheckinService struct {
+	Email       string
+	Passwd      string
 	CronSpec    string
 	CronDisable bool
 	TryCount    int
@@ -32,7 +34,7 @@ func (c *CheckinService) Run(commonFlag *CommonFlag) error {
 }
 
 func (c *CheckinService) start() error {
-	cookies, err := login(c.client, c.commonFlag.Host, c.commonFlag.Email, c.commonFlag.Passwd, c.TryCount)
+	cookies, err := login(c.client, c.commonFlag.Host, c.Email, c.Passwd, c.TryCount)
 	if err != nil {
 		return err
 	}

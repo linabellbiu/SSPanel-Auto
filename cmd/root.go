@@ -27,11 +27,7 @@ var (
 
 func init() {
 	rootCmd.Flags().StringVarP(&commonFlag.Host, "host", "H", "", "需要访问的域名 例如: http://wwww.xxx.com (必填)")
-	rootCmd.Flags().StringVarP(&commonFlag.Email, "email", "e", "", "账户名,注册的邮箱账号 (必填)")
-	rootCmd.Flags().StringVarP(&commonFlag.Passwd, "passwd", "p", "", "密码,注册的密码 (必填)")
 	rootCmd.Flags().StringVarP(&commonFlag.Proxy, "proxy", "x", "", "设置http代理 例如:http://127.0.0.1:7890")
 
 	_ = rootCmd.MarkFlagRequired("host")
-	_ = rootCmd.MarkFlagRequired("email")
-	_ = rootCmd.MarkFlagRequired("passwd")
 }
