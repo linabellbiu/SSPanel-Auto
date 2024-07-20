@@ -22,7 +22,7 @@
 
 ### 自动注册
 1. fork 仓库代码到自己仓库
-2. 把host和code添加到仓库的`secrets`中,[使用指南](https://docs.github.com/zh/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository)
+2. 把host和code (自己的邀请码) 添加到仓库的`secrets`中,[使用指南](https://docs.github.com/zh/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository)
 
 <img src=".github/img3.png" width="600">  
 3. 进入Actions，执行一次`AutoReg`工作流。(因为 Github 默认 Fork 后的项目 Github Actions 处于关闭状态)
