@@ -3,7 +3,6 @@ package service
 import (
 	"fmt"
 	"github.com/go-resty/resty/v2"
-	"github.com/robfig/cron/v3"
 	"net/http"
 	"strings"
 	"time"
@@ -23,6 +22,16 @@ func (c *CheckinService) Run(commonFlag *CommonFlag) error {
 
 	SetProxy(commonFlag.Proxy)
 
+	if c.CronDisable {
+		return c.start()
+	} else {
+		cronTask(c, c.CronSpec)
+	}
+
+	return nil
+}
+
+func (c *CheckinService) start() error {
 	cookies, err := login(c.client, c.commonFlag.Host, c.commonFlag.Email, c.commonFlag.Passwd, c.TryCount)
 	if err != nil {
 		return err
@@ -69,25 +78,4 @@ func (c *CheckinService) checkin(cookies []*http.Cookie) {
 		return
 	}
 	return
-}
-
-// 定时任务,会阻塞进程
-func cronTable(f func()) {
-	var crontab = cron.New()
-
-	task := func() {
-		f()
-	}
-
-	// 定时任务
-	// 每天的凌晨1秒执行
-	spec := "1 0 0 * * *"
-
-	// 添加定时任务,
-	_, _ = crontab.AddFunc(spec, task)
-
-	crontab.Start()
-	defer crontab.Stop()
-
-	select {}
 }
