@@ -1,0 +1,26 @@
+# This workflow will build a golang project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
+
+name: AutoCheckin
+
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron: '* */2 * * *' # 每隔两个小时注册一次
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.20'
+
+    - name: init
+      run: go mod tidy
+
+    - name: run
+      run: go run . -H=${{ secrets.HOST }} reg --code=${{ secrets.Code }}
