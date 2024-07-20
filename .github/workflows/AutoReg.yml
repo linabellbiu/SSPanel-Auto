@@ -6,7 +6,7 @@ name: AutoReg
 on: 
   workflow_dispatch:
   schedule:
-    - cron: '* */2 * * *' # 每隔两个小时注册一次
+    - cron: '0 */2 * * *' # 每隔两个小时注册一次
 
 jobs:
   build:
