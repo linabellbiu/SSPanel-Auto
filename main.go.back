@@ -44,7 +44,7 @@ func main() {
 	fmt.Println("flags:", cmd)
 
 	if cmd.Login != "auto" && cmd.Login != "always" && cmd.Login != "no" {
-		log.Fatal("请设置设置身份是否过期自动登录,查看详情 `./SSPanel-AutoCheckin -h`")
+		log.Fatal("请设置设置身份是否过期自动登录,查看详情 `./SSPanel-Auto -h`")
 	}
 
 	if cmd.HttpProxy != "" {

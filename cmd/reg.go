@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/linabellbiu/SSPanel-AutoCheckin/service"
+	"github.com/linabellbiu/SSPanel-Auto/service"
 	"github.com/spf13/cobra"
 	"log"
 )

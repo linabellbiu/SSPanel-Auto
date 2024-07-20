@@ -1,4 +1,4 @@
-module github.com/linabellbiu/SSPanel-AutoCheckin
+module github.com/linabellbiu/SSPanel-Auto
 
 go 1.18
 

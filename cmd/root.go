@@ -2,15 +2,15 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/linabellbiu/SSPanel-AutoCheckin/service"
+	"github.com/linabellbiu/SSPanel-Auto/service"
 	"github.com/spf13/cobra"
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "SSPanel-AutoCheckin",
+	Use:   "SSPanel-Auto",
 	Short: "实现SSPanel框架搭建的平台流量自动签到功能,自动邀请注册的功能",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Use \"SSPanel-AutoCheckin [command] --help\" for more information about a command.")
+		fmt.Println("Use \"SSPanel-Auto [command] --help\" for more information about a command.")
 	},
 	TraverseChildren: true,
 }

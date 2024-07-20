@@ -1,6 +1,6 @@
 package main
 
-import "github.com/linabellbiu/SSPanel-AutoCheckin/cmd"
+import "github.com/linabellbiu/SSPanel-Auto/cmd"
 
 func main() {
 	err := cmd.RootCmd()
