@@ -1,5 +1,5 @@
 # SSPanel-Auto
-实现SSPanel框架搭建的平台流量自动签到功能,windows,mac,linux 都可以使用
+实现SSPanel框架搭建的平台 `自动签到`,`自动注册`功能,从而领取免费的流量. windows,mac,linux 都可以使用
 
 ## 相关说明 
 适用于使用 SSPanel 用户管理面板搭建的网站，网站页面底部会有 `Powered by SSPANEL` 字段  
@@ -14,12 +14,18 @@
 
 ### 自动签到
 1. fork 仓库代码到自己仓库
-2. 把email和passwd添加到仓库的`secrets`中,[使用指南](https://docs.github.com/zh/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository)  
+2. 把host,email和passwd添加到仓库的`secrets`中,[使用指南](https://docs.github.com/zh/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository)  
 
    <img src=".github/img.png" width="600">  
 
 3. 进入Actions，执行一次`AutoCheckin`工作流。(因为 Github 默认 Fork 后的项目 Github Actions 处于关闭状态)
 
+### 自动注册
+1. fork 仓库代码到自己仓库
+2. 把host和code添加到仓库的`secrets`中,[使用指南](https://docs.github.com/zh/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository)
+
+<img src=".github/img3.png" width="600">  
+3. 进入Actions，执行一次`AutoReg`工作流。(因为 Github 默认 Fork 后的项目 Github Actions 处于关闭状态)
 
 ## 本地执行
 [下载可执行文件](https://github.com/linabellbiu/SSPanel-Auto/releases)  
@@ -62,6 +68,7 @@ Flags:
 ```
 
 ### 自动注册
+> 自动注册会自动生成账号密码用户名,必须要添加`code`参数,否则注册无法反流量!!!
 参数
 ```
 Usage:
@@ -69,7 +76,7 @@ Usage:
 
 Flags:
       --code string    邀请码,填写才能反流量 (必填)
-      --count int      每次注册的数量,不要设置太大 (default 3)
+      --count int      每次注册的数量,不要设置太大 (default 1)
       --cron string    设置每天定时执行,只用在本地执行,如果是放在github action中要关闭这个选项.
                        配合'cron_disable'指令打开此功能 (default "1 0 0 * * *")
       --cron_disable   关闭次指令后,可以使用'cron'设置定时执行 (default true)
