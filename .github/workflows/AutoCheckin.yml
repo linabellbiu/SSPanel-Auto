@@ -23,4 +23,4 @@ jobs:
       run: go mod tidy
 
     - name: run
-      run: go run . -d=${{ secrets.HOST }} -e=${{ secrets.EMAIL }} -p=${{ secrets.PASSWD }}
+      run: go run . -H=${{ secrets.HOST }} checkin -e=${{ secrets.EMAIL }} -p=${{ secrets.PASSWD }}
