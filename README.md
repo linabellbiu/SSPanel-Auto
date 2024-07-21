@@ -2,7 +2,7 @@
 实现SSPanel框架搭建的平台 `自动签到`,`自动邀请注册`功能,从而领取免费的流量. windows,mac,linux 都可以使用
 
 ## 相关说明 
-适用于使用 sspanel 用户管理面板搭建的网站，网站页面底部会有 `Powered by SSPANEL` 字段  
+适用于使用 SSPanel 用户管理面板搭建的网站，网站页面底部会有 `Powered by SSPANEL` 字段  
 登录页面张这个样子
 
 <img src=".github/img2.png" width="300">
